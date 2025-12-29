@@ -1,0 +1,593 @@
+/* Reset y configuración base */
+*, *:before, *:after {
+    box-sizing: inherit; /* Para usar todo el ancho y alto */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+.d-block {
+    display: block !important; /* !important obliga que el display sea en bloque */
+}
+
+body {
+    background-color: black;
+    font-family: "DM Serif Text", serif;
+    font-style: normal;
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.6;
+    color: white;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.5rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header img {
+    height: 65px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para los iconos del menú */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 70px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    min-width: 90px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item i {
+    font-size: 2.8rem;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover i {
+    transform: scale(1.1);
+    margin-bottom: 0.8rem;
+}
+
+.nav-text {
+    font-size: 1.4rem;
+    margin: 0;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 0.8rem;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+}
+
+.nav-item:hover .nav-text {
+    opacity: 1;
+    transform: translateY(1);
+}
+
+a{
+    color: transparent;
+}
+
+/* Estilos para el contenido principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+article {
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;  
+    font-weight: 800;
+    font-size: 3.5rem; /* 35px */
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    color: #c62828;  /* Rojo oscuro para buen contraste */
+    font-weight: 600; /* Un poco más grueso para mejor legibilidad */
+    font-size: 2.4rem; /* 24px */
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5rem;
+} 
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    color: white;
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+ol {
+    color: white;
+    padding-left: 3rem;
+    margin: 1.5rem 0;
+}
+
+li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.6;
+    padding-left: 0.5rem;
+}
+
+strong {
+    color: #f0f0f0;
+    font-weight: 600;
+}
+
+/* Estilos específicos para la página CSS */
+
+code {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f8c8dc; /* Color rosa suave para el código */
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+}
+
+pre {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f8c8dc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #c62828;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* Estilos específicos para la página JS */
+h3 {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 1.2rem 0 0.8rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #c62828;
+}
+
+h4 {
+    color: #bbbbbb;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 1rem 0 0.6rem 0;
+    padding-left: 0.8rem;
+}
+
+.feature-list {
+    color: white;
+    padding-left: 2.5rem;
+    margin: 1.2rem 0;
+    list-style-type: none;
+}
+
+.feature-list li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding-left: 0;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: #c62828;
+    font-size: 2rem;
+    position: absolute;
+    left: -2rem;
+    top: -0.2rem;
+}
+
+.feature-list strong {
+    color: #f0f0f0;
+    font-weight: 600;
+}
+
+/* Estilos específicos para la página SQL */
+
+.database-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.type-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #c62828;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.sql-features {
+    color: white;
+    padding-left: 2.5rem;
+    margin: 1.2rem 0;
+    list-style-type: none;
+}
+
+.sql-features li {
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.sql-features li::before {
+    content: "▶";
+    color: #c62828;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.concept-item, .importance-item {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border-left: 3px solid rgba(198, 40, 40, 0.5);
+}
+
+.concept-item h3, .importance-item h3 {
+    color: #e0e0e0;
+    font-size: 1.8rem;
+    margin: 0 0 0.8rem 0;
+    border-left: none;
+    padding-left: 0;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.app-item {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border-top: 3px solid rgba(198, 40, 40, 0.3);
+    transition: all 0.3s ease;
+}
+
+.app-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.app-item h3 {
+    color: #f0f0f0;
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem 0;
+    border-left: none;
+    padding-left: 0;
+}
+
+.conclusion {
+    background-color: rgba(198, 40, 40, 0.1);
+    border-left: 4px solid #c62828;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .header-content {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-item {
+        min-width: 65px;
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .nav-item:hover {
+        min-width: 85px;
+    }
+    
+    .nav-item i {
+        font-size: 2.5rem;
+    }
+    
+    h1 {
+        font-size: 3.2rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 58%;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    header img {
+        height: 55px;
+    }
+    
+    .nav-icons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+    
+    .nav-item {
+        min-width: 60px;
+        padding: 0.6rem 0.7rem;
+    }
+    
+    .nav-item:hover {
+        min-width: 75px;
+    }
+    
+    .nav-item i {
+        font-size: 2.2rem;
+    }
+    
+    .nav-text {
+        font-size: 1.2rem;
+        bottom: 0.6rem;
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+        margin: 1.5rem 0 2.5rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+
+    code {
+        font-size: 1.4rem;
+    }
+    
+    pre {
+        font-size: 1.4rem;
+        padding: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    h4 {
+        font-size: 1.6rem;
+    }
+    
+    .feature-list li {
+        font-size: 1.5rem;
+    }
+
+    .database-types {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .type-item, .concept-item, .importance-item, .app-item {
+        padding: 1rem;
+    }
+    
+    .sql-features li {
+        font-size: 1.5rem;
+        padding-left: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 52%;
+    }
+    
+    .header-content {
+        padding: 0.8rem;
+    }
+    
+    header img {
+        height: 50px;
+    }
+    
+    .nav-item {
+        min-width: 55px;
+        padding: 0.5rem 0.6rem;
+    }
+    
+    .nav-item:hover {
+        min-width: 65px;
+    }
+    
+    .nav-item i {
+        font-size: 2rem;
+    }
+    
+    .nav-text {
+        font-size: 1.1rem;
+        bottom: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 2.4rem;
+        margin: 1rem 0 2rem 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        color: #d32f2f; /* Un poco más claro en móviles para mejor legibilidad */
+    }
+    
+    .nav-icons {
+        gap: 0.3rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.2rem;
+    }
+
+    code {
+        font-size: 1.3rem;
+    }
+    
+    pre {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        padding-left: 0.8rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+        padding-left: 0.6rem;
+    }
+    
+    .feature-list {
+        padding-left: 2rem;
+    }
+    
+    .feature-list li {
+        font-size: 1.4rem;
+    }
+    
+    .feature-list li::before {
+        left: -1.5rem;
+    }
+
+    .type-item, .concept-item, .importance-item, .app-item {
+        padding: 0.8rem;
+    }
+    
+    .sql-features li {
+        font-size: 1.4rem;
+        padding-left: 1.2rem;
+    }
+    
+    .concept-item h3, .importance-item h3 {
+        font-size: 1.6rem;
+    }
+    
+    .app-item h3 {
+        font-size: 1.5rem;
+    }
+}

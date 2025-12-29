@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>SQL and Databases</title>
+    <!-- Estilos de la página -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Fuente de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Rancho&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Icono de la pestaña-->
+    <link rel="shortcut icon" href="../pictures/1-icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../pictures/2-Logo.png" alt="Page logo and return to homepage">
+            <div class="nav-icons">
+                <a href="../index.html">
+                    <div class="nav-item">
+                        <i class="fa-brands fa-html5" style="color: #fcfcfc;"></i>
+                        <p class="nav-text">HTML</p>
+                    </div>
+                </a>
+                
+                <a href="../pages/css.html">
+                    <div class="nav-item">
+                        <i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i>
+                        <p class="nav-text">CSS</p>
+                    </div>
+                </a>
+
+                <a href="../pages/js.html">
+                    <div class="nav-item">
+                        <i class="fa-brands fa-square-js" style="color: #ffffff;"></i>
+                        <p class="nav-text">JAVA SCRIPT</p>
+                    </div>
+                </a>
+                
+                <a href="../pages/sql.html">
+                    <div class="nav-item">
+                        <i class="fa-solid fa-database" style="color: #ffffff;"></i>
+                        <p class="nav-text">SQL</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <article>
+            <h1>SQL and Databases</h1>
+            
+            <section>
+                <h2>Introduction</h2>
+                <p>Structured Query Language (SQL) and databases are cornerstones of modern data management. SQL is a specialized language used to interact with relational databases, while databases are systematic collections of data managed through a Database Management System (DBMS). This guide will explore the fundamentals of SQL and databases, including their types, importance, and real-world applications.</p>
+            </section>
+            
+            <section>
+                <h2>What is a Database?</h2>
+                <p>A database is an organized collection of structured information or data, typically stored electronically in a computer system. Managed by a Database Management System (DBMS), a database provides a systematic way to create, retrieve, update, and manage data.</p>
+            </section>
+            
+            <section>
+                <h2>Types of Databases</h2>
+                <div class="database-types">
+                    <div class="type-item">
+                        <h3>1. Relational Databases</h3>
+                        <p><strong>Description:</strong> Store data in tables with rows and columns. Each table represents an entity, and relationships between tables are established using keys.</p>
+                        <p><strong>Example:</strong> SQL is primarily used with relational databases.</p>
+                    </div>
+                    
+                    <div class="type-item">
+                        <h3>2. NoSQL Databases</h3>
+                        <p><strong>Description:</strong> Designed for specific data models with flexible schemas. Suitable for handling large sets of distributed data.</p>
+                        <p><strong>Examples:</strong> MongoDB, Cassandra, and Redis.</p>
+                    </div>
+                    
+                    <div class="type-item">
+                        <h3>3. In-Memory Databases</h3>
+                        <p><strong>Description:</strong> Reside in a computer's main memory (RAM) for faster data access.</p>
+                        <p><strong>Examples:</strong> SAP HANA and Redis.</p>
+                    </div>
+                    
+                    <div class="type-item">
+                        <h3>4. NewSQL Databases</h3>
+                        <p><strong>Description:</strong> Aim to combine the scalability of NoSQL with the ACID (Atomicity, Consistency, Isolation, Durability) properties of traditional relational databases.</p>
+                        <p><strong>Examples:</strong> Google Spanner and CockroachDB.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>What is SQL?</h2>
+                <p>SQL stands for Structured Query Language. It is used to manage and manipulate relational databases. SQL allows users to:</p>
+                <ul class="sql-features">
+                    <li><strong>Query Data:</strong> Retrieve specific information from databases.</li>
+                    <li><strong>Update Data:</strong> Modify existing records.</li>
+                    <li><strong>Insert Data:</strong> Add new records.</li>
+                    <li><strong>Delete Data:</strong> Remove records.</li>
+                    <li><strong>Define Database Structures:</strong> Create and alter tables and relationships.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Key Concepts in SQL</h2>
+                
+                <div class="concept-item">
+                    <h3>1. Tables and Schema</h3>
+                    <p><strong>Tables:</strong> Fundamental database components holding data in rows and columns.</p>
+                    <p><strong>Schema:</strong> Defines the structure of the database, including tables and their relationships.</p>
+                </div>
+                
+                <div class="concept-item">
+                    <h3>2. Queries</h3>
+                    <p><strong>SELECT Statement:</strong> Retrieves data from tables.</p>
+                    <pre><code>SELECT * FROM books;</code></pre>
+                </div>
+                
+                <div class="concept-item">
+                    <h3>3. Filtering and Sorting</h3>
+                    <p><strong>WHERE Clause:</strong> Filters results based on conditions.</p>
+                    <pre><code>SELECT * FROM books WHERE author = 'J.K. Rowling';</code></pre>
+                    <p><strong>ORDER BY Clause:</strong> Sorts results in ascending or descending order.</p>
+                    <pre><code>SELECT * FROM books ORDER BY publication_year DESC;</code></pre>
+                </div>
+                
+                <div class="concept-item">
+                    <h3>4. Joins</h3>
+                    <p><strong>INNER JOIN:</strong> Retrieves matching records from two tables.</p>
+                    <pre><code>SELECT books.title, authors.name 
+FROM books 
+INNER JOIN authors ON books.author_id = authors.id;</code></pre>
+                    <p><strong>LEFT JOIN:</strong> Retrieves all records from the left table and matched records from the right table.</p>
+                </div>
+                
+                <div class="concept-item">
+                    <h3>5. Aggregation</h3>
+                    <p><strong>COUNT, AVG, SUM, MIN, MAX:</strong> Perform calculations on data.</p>
+                    <pre><code>SELECT COUNT(*) FROM books;</code></pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Why are SQL and Databases Important?</h2>
+                
+                <div class="importance-item">
+                    <h3>1. Data Management</h3>
+                    <p><strong>Efficiency:</strong> Manage large volumes of data in an organized manner with SQL for efficient querying and manipulation.</p>
+                </div>
+                
+                <div class="importance-item">
+                    <h3>2. Data Integrity</h3>
+                    <p><strong>Consistency:</strong> Enforce constraints to ensure data accuracy and consistency.</p>
+                </div>
+                
+                <div class="importance-item">
+                    <h3>3. Performance</h3>
+                    <p><strong>Speed:</strong> Optimize queries for quick data retrieval and manipulation.</p>
+                </div>
+                
+                <div class="importance-item">
+                    <h3>4. Scalability</h3>
+                    <p><strong>Flexibility:</strong> Handle large amounts of data and multiple users, suitable for small to large-scale systems.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Real-World Applications</h2>
+                <p>SQL and databases are used across various industries:</p>
+                
+                <div class="applications-grid">
+                    <div class="app-item">
+                        <h3>• E-commerce</h3>
+                        <p>Manage product catalogs, customer data, and transactions.</p>
+                    </div>
+                    
+                    <div class="app-item">
+                        <h3>• Banking</h3>
+                        <p>Handle accounts, transactions, and financial records.</p>
+                    </div>
+                    
+                    <div class="app-item">
+                        <h3>• Healthcare</h3>
+                        <p>Store patient records, appointments, and medical histories.</p>
+                    </div>
+                    
+                    <div class="app-item">
+                        <h3>• Telecommunications</h3>
+                        <p>Manage customer data, billing information, and call records.</p>
+                    </div>
+                    
+                    <div class="app-item">
+                        <h3>• Education</h3>
+                        <p>Track student records, courses, and grades.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="conclusion">
+                <h2>Conclusion</h2>
+                <p>Mastering SQL and understanding databases is crucial for effective data management and analysis. SQL offers a powerful and standardized way to interact with relational databases, making it an essential tool for managing and utilizing data across diverse applications. Whether for personal projects or large-scale enterprise systems, proficiency in SQL and databases enhances your ability to handle and make sense of data efficiently.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

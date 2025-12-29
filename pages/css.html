@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>CSS - Cascading Style Sheets</title>
+    <!-- Estilos de la página -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Fuente de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Rancho&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Icono de la pestaña-->
+    <link rel="shortcut icon" href="../pictures/1-icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../pictures/2-Logo.png" alt="Page logo and return to homepage">
+            <div class="nav-icons">
+                <a href="../index.html">
+                    <div class="nav-item">
+                        <i class="fa-brands fa-html5" style="color: #fcfcfc;"></i>
+                        <p class="nav-text">HTML</p>
+                    </div>
+                </a>
+                
+                <a href="../pages/css.html">
+                    <div class="nav-item">
+                        <i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i>
+                        <p class="nav-text">CSS</p>
+                    </div>
+                </a>
+
+                <a href="../pages/js.html">
+                    <div class="nav-item">
+                        <i class="fa-brands fa-square-js" style="color: #ffffff;"></i>
+                        <p class="nav-text">JAVA SCRIPT</p>
+                    </div>
+                </a>
+                
+                <a href="../pages/sql.html">
+                    <div class="nav-item">
+                        <i class="fa-solid fa-database" style="color: #ffffff;"></i>
+                        <p class="nav-text">SQL</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <article>
+            <h1>Stylesheet language CSS</h1>
+            
+            <section>
+                <h2>Introduction</h2>
+                <p>CSS, or Cascading Style Sheets, is a stylesheet language used for describing the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, or in other media. One of the core languages of the open web, CSS is standardized across Web browsers according to W3C specifications.</p>
+            </section>
+            
+            <section>
+                <h2>The Basics of CSS</h2>
+                <p>CSS allows developers to separate content from design, enabling the easy application of styles to web pages. By using CSS, you can control the color, font, size, spacing, positioning, and many other aspects of HTML elements. This separation of content and design simplifies the maintenance of web pages and allows for more flexibility.</p>
+            </section>
+            
+            <section>
+                <h2>Selectors and Properties</h2>
+                <p>CSS rules are made up of selectors and properties. A selector targets the HTML element you want to style, while properties are the aspects of the element you want to change. For example, in the rule <code>h1 { color: blue; }</code>, <code>h1</code> is the selector, and <code>color: blue;</code> is the property.</p>
+            </section>
+            
+            <section>
+                <h2>CSS Syntax</h2>
+                <p>The syntax of CSS includes selectors, properties, and values. Each rule begins with a selector, followed by a declaration block that contains one or more declarations separated by semicolons. Each declaration includes a property and a value, separated by a colon. For example:</p>
+                
+                <pre><code>p {
+                    font-size: 16px;
+                    color: black;
+                    } 
+                </code></pre>
+            </section>
+            
+            <section>
+                <h2>Benefits of CSS</h2>
+                <p>Using CSS has several benefits:</p>
+                <ol>
+                    <li><strong>Efficiency:</strong> CSS can apply styles to multiple pages, saving time and effort.</li>
+                    <li><strong>Consistency:</strong> Ensures a consistent look across all web pages.</li>
+                    <li><strong>Flexibility:</strong> Changes to styles can be made easily without altering the HTML content.</li>
+                </ol>
+            </section>
+            
+            <section>
+                <h2>Types of CSS</h2>
+                <p>There are three main ways to implement CSS in a document:</p>
+                <ol>
+                    <li><strong>Inline CSS:</strong> Styles are applied directly within HTML tags using the style attribute.</li>
+                    <li><strong>Internal CSS:</strong> Styles are defined within a &lt;style&gt; tag in the &lt;head&gt; section of the HTML document.</li>
+                    <li><strong>External CSS:</strong> Styles are defined in an external .css file, which is linked to the HTML document.</li>
+                </ol>
+            </section>
+            
+            <section>
+                <h2>CSS Frameworks</h2>
+                <p>CSS frameworks are pre-prepared libraries that are meant to be used as a base for starting development. They provide common styles for various elements, saving time and ensuring a consistent look. Popular CSS frameworks include Bootstrap, Foundation, and Bulma.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
